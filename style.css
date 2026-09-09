@@ -1,0 +1,509 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #202020 0%,
+            #080808 45%,
+            #000 100%
+        );
+    color: #fff;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Cinzel", serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+.logo span {
+    color: #a00000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c00000;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 120px 20px 80px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.92)
+        ),
+        url("https://upload.wikimedia.org/wikipedia/commons/3/3d/Black_background.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.symbol {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 25px;
+
+    border: 2px solid #a00000;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+    color: #a00000;
+
+    box-shadow:
+        0 0 20px rgba(170, 0, 0, 0.4),
+        inset 0 0 20px rgba(170, 0, 0, 0.15);
+}
+
+.hero h1 {
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(42px, 8vw, 86px);
+
+    letter-spacing: 8px;
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #a00000;
+}
+
+.hero p {
+    color: #aaa;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+.classified {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 12px 24px;
+
+    border: 1px solid #a00000;
+
+    color: #d00000;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 100px 25px;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.section-title h2 {
+    font-family: "Cinzel", serif;
+
+    font-size: 38px;
+
+    letter-spacing: 4px;
+}
+
+.section-title span {
+    color: #a00000;
+}
+
+.section-title p {
+    color: #777;
+
+    margin-top: 12px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.about-text h3 {
+    font-family: "Cinzel", serif;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #aaa;
+
+    line-height: 1.9;
+
+    margin-bottom: 15px;
+}
+
+.warning {
+    border-left: 3px solid #a00000;
+
+    padding: 18px 20px;
+
+    margin-top: 25px;
+
+    background: rgba(160, 0, 0, 0.08);
+
+    color: #ccc;
+}
+
+.about-image {
+    min-height: 360px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.7)
+        ),
+        url("https://upload.wikimedia.org/wikipedia/commons/5/5a/Detective_Conan_logo.svg");
+
+    background-size: contain;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    border: 1px solid #222;
+}
+
+
+/* =========================
+   CHARACTER GRID
+========================= */
+
+.characters {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #0c0c0c;
+
+    border: 1px solid #252525;
+
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    border-color: #8d0000;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.card-image {
+    height: 350px;
+
+    overflow: hidden;
+
+    background: #151515;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    display: block;
+
+    transition: 0.5s;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.rank {
+    color: #a00000;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+}
+
+.card h3 {
+    font-family: "Cinzel", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 5px;
+}
+
+.codename {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #aaa;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   ORGANIZATION TABLE
+========================= */
+
+.intel-box {
+    background: #0b0b0b;
+
+    border: 1px solid #222;
+
+    padding: 30px;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 650px;
+}
+
+th,
+td {
+    text-align: left;
+
+    padding: 17px;
+
+    border-bottom: 1px solid #222;
+}
+
+th {
+    color: #a00000;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+td {
+    color: #aaa;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #030303;
+
+    border-top: 1px solid #181818;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+footer h3 {
+    font-family: "Cinzel", serif;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #666;
+
+    font-size: 13px;
+}
+
+.copyright {
+    margin-top: 20px;
+
+    color: #444;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .characters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    nav ul {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        letter-spacing: 4px;
+    }
+
+    .characters {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 420px;
+    }
+
+    section {
+        padding: 75px 18px;
+    }
+  }
